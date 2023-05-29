@@ -1,0 +1,485 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300&display=swap');
+
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red !important; */
+}
+
+/* General Styling */
+body {
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    font-family: 'Jost', sans-serif;
+}
+
+p:hover {
+    cursor: default;
+}
+
+textarea {
+    border: none;
+    border-radius: 5px;
+}
+
+/* Website Style */
+::-webkit-scrollbar {
+    background-color: rgb(219, 219, 219);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(190, 190, 190);
+    border-radius: 15px;
+}
+
+/* Navbar */
+.top {
+    margin-bottom: 6rem;
+
+}
+
+.d-flex {
+    display: flex;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(238, 238, 238);
+}
+
+.page-links {
+    width: max-content;
+    margin-right: 11rem;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.page-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.navbar-links ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.toggle-btn {
+    position: absolute;
+    top: 2.4rem;
+    right: 1.5rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+.toggle-btn .bar {
+    height: 3px;
+    width: 100%;
+    background-color: gray;
+    border-radius: 10px;
+}
+
+
+.form-control,
+.btn1 {
+    font-weight: 400;
+    border: none;
+    border-radius: 0px;
+    transition: 0.5s;
+}
+
+.btn1:hover {
+    background-color: rgba(226, 226, 226, 0.685);
+    border-radius: 5px;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.modal-dialog {
+    width: 30%;
+}
+
+#navbarSupportedContent {
+    display: flex;
+    flex-direction: row;
+    padding-left: 47rem;
+}
+
+/* First sight items styling */
+
+.home-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 5%;
+}
+
+.main-picture {
+    margin-left: 3rem;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 110%;
+    gap: 100px;
+}
+
+.main-txt {
+    width: 26rem;
+    height: 83vh;
+    font-size: 4rem;
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-txt b {
+    color: rgb(78, 205, 196);
+}
+
+.img-card img {
+    height: 13rem;
+    margin: 1rem;
+}
+
+.img-card {
+    width: 1fr;
+    display: flex;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    filter: blur(2px);
+}
+
+.img-card:hover {
+    filter: blur(0px);
+}
+
+
+
+/* Cards styling */
+
+.container-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container-card .card {
+    position: relative;
+    max-width: 300px;
+    height: 215px;
+    background-color: #fff;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: 0.4s ease-in-out;
+    border-radius: 15px;
+}
+
+.container-card .card:hover {
+    height: 23.5rem;
+}
+
+
+.container-card .card .image {
+    position: relative;
+    width: 260px;
+    height: 260px;
+
+    top: 0%;
+    left: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.container-card .card .image img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+.container-card .card .content {
+    position: relative;
+    top: -30px;
+    padding: 10px 15px;
+    color: #111;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+
+}
+
+.container-card .card:hover .content {
+    margin-top: 30px;
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.2s;
+}
+
+.image img {
+    height: 10rem;
+    margin: 0;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    object-fit: contain;
+}
+
+.card-section {
+    margin: 3rem;
+    padding: 1rem;
+    height: 30%;
+}
+
+.card-section-title {
+    color: rgb(78, 205, 196);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-item {
+    height: 30%;
+    overflow: hidden;
+}
+
+/* Newsletter section styling*/
+.newsletter {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    margin: 3rem;
+    border: 1px solid grey;
+    font-weight: 100;
+    border-radius: 25px;
+    background-image: url(/Img/background-newsletter.webp);
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.newsletter h1 {
+    display: flex;
+    width: 50%;
+}
+
+.newsletter p {
+    width: 30%;
+    font-size: 20px;
+}
+
+.newsletter-btn {
+    border: none;
+    transition: 0.4s;
+    background-color: white;
+    padding: 0 5px 0 5px;
+    border-radius: 5px;
+    color: rgb(78, 205, 196);
+    transition: 0.5s;
+}
+
+.newsletter-btn:hover {
+    transform: scale(1.1);
+    border: 1px solid grey;
+    background-color: #ececec;
+}
+
+.news-txt {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2rem;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(233, 233, 233);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+}
+
+footer:hover {
+    cursor: default;
+}
+
+.contacts ul {
+    list-style-type: circle;
+}
+
+.mess-btn {
+    border: none;
+    border-radius: 5px;
+    padding: 0.3rem;
+    position: relative;
+    bottom: 0.6rem;
+    transition: 0.3s;
+}
+
+.mess-btn:hover {
+    background-color: rgb(188, 255, 233);
+}
+
+.license {
+    width: 15rem;
+    color: rgb(175, 175, 175);
+}
+
+
+/* Responsive Design */
+
+/* Medium devices - (Ipad) */
+@media screen and (max-width: 1000px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+    }
+
+    .home-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 5rem;
+        margin-bottom: 10rem;
+        margin-left: 0;
+        margin-right: 4rem;
+    }
+
+    .main-txt {
+        height: 10rem;
+    }
+
+    .news-txt p {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px;
+        align-items: center;
+        height: 10px;
+    }
+
+    .toggle-btn {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links li {
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .d-flex {
+        width: 10rem;
+    }
+
+    .navbar-links.actv {
+        display: flex;
+    }
+}
+
+/* Phone size */
+@media screen and (max-width:450px) {
+    .navbar {
+        width: 100%;
+        margin-left: .5rem;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .main-picture {
+        flex-direction: column;
+    }
+
+    .home-container {
+        margin-right: 0rem;
+    }
+
+    .card-section {
+        margin: 0;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .newsletter {
+        display: none;
+    }
+
+    .page-links {
+        margin: 0;
+        flex-direction: column;
+    }
+
+    .navbar-links ul {
+        align-items: center;
+    }
+}
