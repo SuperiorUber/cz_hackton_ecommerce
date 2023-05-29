@@ -288,7 +288,7 @@ textarea {
     border: 1px solid grey;
     font-weight: 100;
     border-radius: 25px;
-    background-image: url(/Img/background-newsletter.webp);
+    background-image: url(../Img/background-newsletter.webp);
     background-size: contain;
     background-attachment: fixed;
     background-repeat: no-repeat;
